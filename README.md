@@ -1,78 +1,92 @@
-⏱️ **Time-Pomodoro**
+# ⏱️ Time Pomodoro
 
+Este projeto é uma aplicação de produtividade desenvolvida com HTML + CSS + JavaScript, baseada na técnica Pomodoro, criada para ajudar usuários a melhorar foco, organização e gerenciamento de tarefas durante sessões de trabalho ou estudo.
 
-<br>
-O Time-Pomodoro é um cronômetro simples e intuitivo para aplicar a técnica Pomodoro, desenvolvido com HTML, CSS e JavaScript.  
-Ele ajuda a organizar ciclos de foco e pausa, tornando o estudo ou trabalho mais produtivo e disciplinado.
-
-
-<br>
-<br>
+O objetivo principal foi construir uma interface moderna, intuitiva e funcional, unindo design UI/UX, controle de tempo e gerenciamento de tarefas em uma experiência prática para produtividade diária.
 
 ---
 
-📌 **Visão Geral**
-O Time-Pomodoro oferece uma interface minimalista com fundo escuro e botões luminosos, permitindo que o usuário controle seus ciclos de concentração e descanso de forma prática.  
-A proposta é facilitar o uso da técnica Pomodoro sem necessidade de aplicativos complexos.
+<br>
+<br>
+
+## 🚀 Funcionalidades
+
+Temporizador Pomodoro completo (Foco, Pausa Curta e Pausa Longa) <br>
+Contador visual de sessões (ciclos de produtividade) <br>
+Sistema de tarefas integrado <br>
+Adicionar e gerenciar tarefas diárias <br>
+Reset rápido de sessões <br>
+Atalhos de teclado para produtividade <br>
+Interface moderna com dark mode <br>
+Design responsivo e minimalista <br>
+Controle opcional de som/notificações <br>
 
 <br>
 <br>
 
----
+## 🛠️ Tecnologias Utilizadas
 
-❗ **Problema a Resolver**
-- Dificuldade em manter disciplina durante longos períodos de estudo ou trabalho.  
-- Falta de ferramentas simples e acessíveis para aplicar a técnica Pomodoro.  
-- Interfaces confusas em cronômetros tradicionais.  
-
-<br>
-<br>
-
----
-
-💡 **Solução Proposta**
-- Um cronômetro digital com ciclos pré-definidos de foco e pausa.  
-- Interface clara e estilizada com CSS, destacando os botões principais.  
-- Experiência simples e acessível para qualquer usuário.  
+HTML5 → Estrutura semântica da aplicação  
+CSS3 → Design moderno, responsividade e efeitos visuais  
+JavaScript → Lógica do temporizador, modos e tarefas  
+LocalStorage (se implementado) → Persistência de tarefas  
+Live Server / Deploy GitHub Pages → Execução e hospedagem  
 
 <br>
 <br>
 
----
+## 📖 O que aprendi com este projeto
 
-✅ **O que foi implementado**
-- ⏱️ Ciclo padrão de 25 minutos de foco e 5 minutos de pausa 
-- 🎛️ Botões intuitivos: Foco, Pausa, Iniciar e Resetar  
-- 🎨 Interface estilizada com CSS e fundo escuro estrelado  
-- 📱 Design responsivo para diferentes dispositivos  
+Criar aplicações funcionais com JavaScript puro  
+Desenvolver lógica de contagem regressiva  
+Gerenciar estados entre diferentes modos  
+Implementar interfaces de produtividade modernas  
+Trabalhar melhor responsividade e organização visual  
+Integrar funcionalidades práticas para experiência real do usuário  
+
 <br>
 <br>
 
----
+## ⚠️ Observações Importantes
 
-👥 **Público-Alvo**
-- Estudantes que desejam manter disciplina nos estudos.  
-- Profissionais que buscam aumentar produtividade.  
-- Usuários que preferem ferramentas simples e diretas.  
+Projeto desenvolvido para fins educacionais e portfólio.  
+Inspirado em ferramentas modernas de produtividade.  
+Foco em experiência do usuário, performance e design funcional.  
+
 <br>
 <br>
 
----
+## 📸 Capturas de Tela
 
-⚙️ **Funcionalidades-Chave**
-- Cronômetro digital com contagem regressiva.  
-- Alternância entre ciclos de foco e pausa.  
-- Reset rápido para reiniciar o ciclo.  
-- Interface visual agradável e minimalista.  
+![Tela Principal](captura%20de%20tela/tela-principal.png)  
+![Temporizador em execução](captura%20de%20tela/timer-execucao.png)  
+![Gerenciamento de tarefas](captura%20de%20tela/tarefas.png)  
+
 <br>
 <br>
 
----
+## 🌐 Acesse o Projeto
 
-🛠️ **Tecnologias**
-- HTML → estrutura da aplicação  
-- CSS → estilização e design responsivo  
-- JavaScript → lógica do cronômetro e interatividade
-  
+Você pode visualizar o projeto diretamente pelo navegador: <br>
+👉 [https://kelvimarcos.github.io/time-pomodoro/](https://kelvimarcos.github.io/time-pomodoro/) <br>
+
+<br>
 <br>
 
+## 📌 Próximos Passos
+
+Adicionar personalização de tempos  
+Implementar notificações sonoras avançadas  
+Salvar progresso com LocalStorage  
+Criar histórico de produtividade  
+Adicionar estatísticas de foco  
+Migrar para React para maior escalabilidade  
+
+<br>
+<br>
+
+## 🧠 Insight rápido
+
+Esse projeto vai além de estética: ele mostra capacidade de construir aplicações funcionais com lógica real, foco em produtividade e experiência do usuário.
+
+Para portfólio, é estratégico porque demonstra domínio de JavaScript, UI moderna e criação de ferramentas úteis — exatamente o tipo de projeto que fortalece sua transição para desenvolvimento front-end profissional.
