@@ -58,9 +58,8 @@ Foco em experiência do usuário, performance e design funcional.
 
 ## 📸 Capturas de Tela
 
-![Tela Principal](captura%20de%20tela/tela-principal.png)  
-![Temporizador em execução](captura%20de%20tela/timer-execucao.png)  
-![Gerenciamento de tarefas](captura%20de%20tela/tarefas.png)  
+![Tela Principal](./captura%20de%20tela/time.png)  
+![Tela Secundária](./captura%20de%20tela/time2.png) 
 
 <br>
 <br>
