@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Time Pomodoro — Gerencie seu tempo com foco e produtividade usando a técnica Pomodoro.">
+    <title>Time Pomodoro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+
+        <!-- Header -->
+        <header class="app-header" id="app-header">
+            <h1 class="logo">time<span>pomodoro</span></h1>
+            <div class="header-right">
+                <button class="sound-toggle" id="soundToggle" aria-label="Alternar som">
+                    Som: ON
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Card -->
+        <main class="pomodoro-card" id="pomodoro-card">
+
+            <!-- Mode Tabs -->
+            <div class="mode-tabs" id="modeTabs">
+                <button class="mode-tab active" data-mode="focus" id="tab-focus">Foco</button>
+                <button class="mode-tab" data-mode="short" id="tab-short">Pausa Curta</button>
+                <button class="mode-tab" data-mode="long" id="tab-long">Pausa Longa</button>
+            </div>
+
+            <!-- Timer Ring -->
+            <div class="timer-ring-wrapper" id="timer-ring-wrapper">
+                <svg class="timer-ring" viewBox="0 0 260 260">
+                    <circle class="timer-ring-bg" cx="130" cy="130" r="120" />
+                    <circle class="timer-ring-progress" id="timerProgress" cx="130" cy="130" r="120" />
+                </svg>
+                <div class="timer-display" id="timerDisplay">
+                    <span class="timer-minutes" id="minutes">25</span>
+                    <span class="timer-separator">:</span>
+                    <span class="timer-seconds" id="seconds">00</span>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls" id="controls">
+                <button class="btn btn-primary" id="startBtn">Iniciar</button>
+                <button class="btn btn-secondary" id="resetBtn">Resetar</button>
+            </div>
+
+            <!-- Session Counter -->
+            <div class="session-info" id="sessionInfo">
+                <div class="session-dots" id="sessionDots">
+                    <span class="dot" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                    <span class="dot" data-index="3"></span>
+                </div>
+                <p class="session-text" id="sessionText">Sessão 1 de 4</p>
+            </div>
+
+        </main>
+
+        <!-- Task List -->
+        <section class="tasks-section" id="tasks-section">
+            <div class="tasks-header">
+                <h2>Tarefas</h2>
+                <button class="clear-done-btn" id="clearDoneBtn">Limpar concluídas</button>
+            </div>
+            <form class="task-form" id="taskForm">
+                <input
+                    type="text"
+                    class="task-input"
+                    id="taskInput"
+                    placeholder="Adicionar nova tarefa..."
+                    maxlength="120"
+                    autocomplete="off"
+                >
+                <button type="submit" class="btn btn-add">+</button>
+            </form>
+            <ul class="task-list" id="taskList">
+                <!-- Tasks rendered by JS -->
+            </ul>
+            <p class="tasks-empty" id="tasksEmpty">Nenhuma tarefa adicionada.</p>
+        </section>
+
+        <!-- Keyboard Shortcuts -->
+        <footer class="shortcuts-bar" id="shortcutsBar">
+            <span><kbd>Espaço</kbd> Iniciar/Pausar</span>
+            <span><kbd>R</kbd> Resetar</span>
+            <span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> Modos</span>
+        </footer>
+
+    </div>
+
+    <!-- Audio notification -->
+    <audio id="alarmSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdG2Mqa6rl5J9cnR8gpWmp6SVhXhxdH2Il6KonZSGe3V2fYiVoaSdlId7dXd9iJaho5yUh3t2d36IlqCjnJOHe3Z4foiXoKOclIZ7dnh+h5agopuUhnt2eH6Hl5+im5OGe3Z4f4eXn6KblIZ7d3h/h5efopuThnt3eH+Hlp+im5OGe3d5f4eWn6Kbk4Z8d3l/h5afopqThnt3eX+Hlp+impOGe3d5f4eWn6Gak4Z7d3l/h5afopqThnt3eX+Hlp+impOGfHd5f4eWn6Kak4Z8d3l/h5afopqThnt3eYCHlp+impOHfHd5f4eWn6Kak4Z8d3mAh5afopqTh3x3eX+Hlp+impOGfHh5f4eXn6Kbk4Z8d3l/h5efopuThnt3eH+Hl5+im5OGe3d4f4eXn6KblIZ7d3h/h5efopuUhnt2eH+Hl5+im5OGe3Z4f4eXn6Kbk4Z7dnh/h5ego5uUhnt2eH6HmKCjnJSHe3V3foiYoaOclIh7dXd+iJiho52UiHt1d36ImKGjnZSIe3V3foiYoaOdlIh8dXd+iJigo52Vh3t1d36ImKGjnZWIfHV3foiYoKOdlYh8dXd+iJigo52Vh3x1d36ImaCjnZWIfHV3f4iYoKOdlYh8dXZ+iJmho52ViHx1dn6ImaCknpWIfHV2foiZoaSdlYh8dXZ+iJmgpJ2ViHx1dn6ImaCknZWJfHV2foiZoKSdlYl8dHZ+iJqhpJ6WiXx0dn+ImqGknpaJfHR1f4iaoaSelpl8dHV/iJqhpJ6WmXx0dX+ImqGknpaZfXR1f4iaoaSelpqBd3V/iJqhpJ6Wm4F3dYCImqGlnpabgXd1f4iaoaSelpuBeHWAiJqhpZ6Wm4F4dYCIm6GlnpebgXh1gIiboaWfl5uBeHWAiJuhpZ+Xm4F5dICIm6KlnpebgXl0gIicoqael5uBeXSAiJyipZ6XnIF5dICJnKKlnpecgXl0gImcoqWfl5yBeXSAiZyipZ+XnIF5dICJnKKlnpecgXl0gYmcoqafl5yBenSBiZyipZ+XnIF6dIGJnKKlnpecgnp0gYmcoqWfl5yBenSBiZyipZ+YnIJ6dIGJnaKln5icgnp0gYmdoqWfmJyCenSBiZ2ipZ+YnIJ7dIGJnaOln5icgnp0gYmdoqWfmJyCe3SBiZ2ipZ+YnIJ7dIGJnaKln5icg3t0gYmdoqafmJyCe3WBiZ6ipZ+YnIN7dYGJnqKmn5icg3t1gYmeoqafmJyDe3WBip6ipp+YnIN8dYGKnqKmn5idg3x1gYqeoqafmJ2DfHWBip6ipp+YnYR8dYGKnqOmn5idhHx1gYqfo6afmJ2EfHWBip+jpqCZnYR8dYGKn6OmoJmdhHx1gYqfo6agmZ2EfXWBip+jpqCZnoR9dYKKn6OmoJmehH11goqfo6agmZ6FfXWCip+jpqCZnoV9dYKKn6OmoJqehX11goqgo6agmp6FfXWCi6CjpqCanoV+dYKLoKSmoJqfhX51gougpKagmp+FfnWCi6CkpqGan4V+doKLoKSmoZqfhn52gougpKahmp+GfnaCi6GkpqGan4Z+doKLoaSmopqfhn92gougpKahm5+Gf3aCi6GkpqKbn4Z/doKLoaSmopufhn92gougpKaimqCGf3aCi6GlpqKaoIaAdoKLoaWmopqghoB2gouipaaimpCGgHaCi6KlpqKakIaAdoOLoqWmopqQhoB3g4uipaaimpCGgHeDi6KlpqKakIaAd4OLoqWno5qQh4B3g4uipaaimpCHgHeDi6OlpqOakIeAd4OLoqWno5uRh4B3g4uipaejmZGHgHeDi6OlpqObkYeBeIOLoqano5uRh4F4g4yipaejm5GIgXiDjKKlp6ObkoiBeIOMoqanpJuSiIF4g4yipaekm5KIgXiEjKKmp6SbkoiBeYSMoqanpJuSiIF5hIyjpqekm5KIgXmEjKOmp6SckoiBeYSMo6anpJySiYF5hIyjpqeknJKJgXmEjKOmp6SckYmBeYSNo6anpJyRiYF5hI2jpqeknJGJgnmEjaOmp6WckYmCeYSNo6anpZyRiYJ6hI2jpqelnJGJgnqEjaOmp6WckYmCeoWNo6enpZyRioJ6hY2jpqelnJKKgnqFjaOmp6WdkoqCeoWNo6enpZ2SioJ6hY2jp6elnZKKg3qFjaSnp6WdkoqDeoWNo6enpp2SioN6hY6kp6elnZOKg3uFjqSnp6adkoqDe4WOpKenpp2TioN7hY6kp6empZOKg3uFjqSnp6alkYqDe4WOpKinpp2RioN7ho6kp6emn5GKg3uGjqSnqKefkYuDe4aOpKenpp+Ri4N7ho6kqKemn5GLg3uGjqWop6afkYuDfIaOpainpp+Ri4N8ho6lqKennZKLhHyGj6Wop6edkouEfIaPpainp52Si4R8ho+lqKennZKLhHyGj6Wop6edkouEfIePpainp52Ti4R8h4+lqKinnZOLhH2Hj6WoqKidkouEfYePpqioqJ2Ti4R9h4+mqKioHQ==" type="audio/wav">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
