@@ -9,6 +9,13 @@ O objetivo principal foi construir uma interface moderna, intuitiva e funcional,
 <br>
 <br>
 
+## 📸 Capturas de Tela
+
+![Tela Principal](./captura%20de%20tela/time.png)  
+
+<br>
+<br>
+
 ## 🚀 Funcionalidades
 
 Temporizador Pomodoro completo (Foco, Pausa Curta e Pausa Longa) <br>
@@ -52,13 +59,6 @@ Integrar funcionalidades práticas para experiência real do usuário
 Projeto desenvolvido para fins educacionais e portfólio.  
 Inspirado em ferramentas modernas de produtividade.  
 Foco em experiência do usuário, performance e design funcional.  
-
-<br>
-<br>
-
-## 📸 Capturas de Tela
-
-![Tela Principal](./captura%20de%20tela/time.png)  
 
 <br>
 <br>
