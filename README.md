@@ -11,7 +11,16 @@ O objetivo principal foi construir uma interface moderna, intuitiva e funcional,
 
 ## 📸 Capturas de Tela
 
-![Tela Principal](./captura%20de%20tela/time.png)  
+![Tela Principal](./captura%20de%20tela/time.png) 
+
+<br>
+<br>
+
+## 🌐 Acesse o Projeto
+
+Você pode visualizar o projeto diretamente pelo navegador: <br>
+👉 [https://kelvimarcos.github.io/time-pomodoro/](https://kelvimarcos.github.io/time-pomodoro/) <br>
+
 
 <br>
 <br>
@@ -59,14 +68,6 @@ Integrar funcionalidades práticas para experiência real do usuário
 Projeto desenvolvido para fins educacionais e portfólio.  
 Inspirado em ferramentas modernas de produtividade.  
 Foco em experiência do usuário, performance e design funcional.  
-
-<br>
-<br>
-
-## 🌐 Acesse o Projeto
-
-Você pode visualizar o projeto diretamente pelo navegador: <br>
-👉 [https://kelvimarcos.github.io/time-pomodoro/](https://kelvimarcos.github.io/time-pomodoro/) <br>
 
 <br>
 <br>
